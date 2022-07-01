@@ -1,6 +1,8 @@
+# REGEX Examples
+# This file shows regex related questions/answers
 import re
 
-#Find a list of all of the names in the following string using regex
+#1. Find a list of all of the names in the following string using regex
 def names():
     simple_string = """Amy is 5 years old, and her sister Mary is 2 years old. 
     Ruth and Peter, their parents, have 3 kids."""
@@ -8,7 +10,7 @@ def names():
     names_found = re.findall("[A-Z]\w*(?=[^\w])", simple_string)
     print(names_found)
 
-#Create a regex to generate a list of just the students who received a B in the course of assets/grades.txt
+#2. Create a regex to generate a list of just the students who received a B in the course of assets/grades.txt
 def grades():
     with open ("D:/Data Science/Introduction to Data Science/assignments/assignment1/assets/grades.txt", "r") as file:
     #with open ("assets/grades.txt", "r") as file:
@@ -19,7 +21,7 @@ def grades():
             counted_grades.append(item.group(1))
     print(counted_grades)
 
-#Convert assets/logdata.txt into a list of dictionaries
+#3. Convert assets/logdata.txt into a list of dictionaries
 def logs():
     with open ("D:/Data Science/Introduction to Data Science/assignments/assignment1/assets/logdata.txt", "r") as file:
     #with open("assets/logdata.txt", "r") as file:
